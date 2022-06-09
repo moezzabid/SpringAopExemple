@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet id="001" author="moez">
+        <createSequence incrementBy="1"
+                        schemaName="public"
+                        sequenceName="passenger_seq"
+                        startValue="1"/>
+        <createTable tableName="passenger">
+            <column name="id" type="BIGINT">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="nom" type="varchar(255)"/>
+            <column name="prenom" type="varchar(255)"/>
+
+        </createTable>
+
+    </changeSet>
+</databaseChangeLog>

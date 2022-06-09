@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/aop"
+    username: postgres
+    password: mo112233
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  liquibase:
+    changeLog: classpath:liquibase/master.xml
+    enabled: true
+server:
+  port: 8084
+
+logging:
+  level:
+    ROOT: debug
